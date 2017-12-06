@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#293a4a">
+<!-- Mobile Chrome-->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="default">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+
+
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+
+
+</script>
+<script type="text/javascript" src="./assets/js/bootstrap-2.0.2.js">
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-combined.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+<style type="text/css">
+    #systems {
+        .hidden {
+            display: none;
+        }
+    }
+
+    #wrap {
+        width: 100%;
+        height: 90%;
+        padding: 15px;
+        overflow: auto;
+    }
+
+    #pp {
+        height: 80%;
+        zoom: 0.75;
+        -moz-transform: scale(0.7);
+        -moz-transform-origin: 0 0;
+    }
+
+    #note {
+        width: 100%;
+        height: 700px;
+        border: 1px solid red;
+    }
+
+    #cms {
+        width: 100%;
+        height: 50%;
+        background-color: white;
+    }
+
+    body {
+        background: url(./assets/images/maxresdefault.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: white;
+    }
+
+</style>
+<title>☯Viper☯
+</title>
+</head>
+
+<body onload="alertUser('All systems are a go! Select a tab to begin!')">
+    <div id="myAlert" style="display:none" class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Let's Thrill!">
+			<span aria-hidden="true">&times;
+
+      </span> Close
+		</button>
+        <strong>Warning!
+
+    </strong>Systems Ver. 4.5.1
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).ready(function() {
+                // If not 'Confirmed', show #myAlert
+                if (sessionStorage.Alert !== 'Confirmed') {
+                    $('#myAlert').show();
+                }
+            });
+            $('#myAlert .close').click(function() {
+                // Set 'Alert' to 'Confirmed' when user click the close button
+                sessionStorage.Alert = "Confirmed";
+                $(this).closest('#myAlert').hide();
+            });
+        });
+
+    </script>
+    <div class="container">
+        <div align="right">
+            <form name="pgenerate" background-color="white">
+                <input class="input input-small" type="text" size=10 name="output">
+                <input type="button" value="Generate" onClick="populateform(this.form.thelength.value)">
+                <b>Strength:</b>
+                <input class="input input-mini" type="text" name="thelength" size=3 value="8">
+            </form>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <div class="header">
+                    <nav>
+                        <ul class="nav nav-tabs" id="myTabs">
+                            <li>
+                                <a class="flip active" id="system" href="#system" data-related="loading">Loading...
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#search" data-related="search">Search
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#notes">Notes
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#pp">PowerPanel
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tix">Tickets
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#timer">Timer
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#hud">HUD
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#stats">Stats
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#help">DNS
+
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#clockin">PayCOM
+
+                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="systems" class="systems">
+                        <div class="panel" id="search" data-related="search">
+                            <div>
+                                <gcse:searchbox>
+                                </gcse:searchbox>
+                            </div>
+                            <div>
+                                <gcse:searchresults>
+                                </gcse:searchresults>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp;
+                </p>
+                <div class="panel" id="notes" data-related="notes">
+                    <div>
+                        <textarea id="note">Notes:
+						</textarea>
+                        <p>&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <p>&nbsp;
+                </p>
+                <div class="panel" id="pp" data-related="pp" style="position: absolute; left: 50%;">
+                    <!--(for adjusting width of iframe in jQuery) $(document).ready(function(){
+					    $('iframe').attr('width',$(window).width());
+					    $('iframe').attr('height',($('iframe').attr('width') * (9/16)));
+					})-->
+                    <div>
+                        <!--p>**UNDER DEVELOPMENT**
+                        </p>
+                        <p>NOTE: Some features may behave unpredictably!
+                        </p-->
+                        <iframe src="#" height="900px" onload="this.width=screen.width" zoom="0.7" frameborder="0" allowtransparency="true" style="position: relative; left: -50%; border: dotted red 1px;">
+						</iframe>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+                <p>
+                </p>
+                <div class="panel" id="tix" data-related="tix">
+                    <div>
+                        <center>
+                            <button onclick="refreshIframeTix();">Refresh Tickets
+							</button>
+                        </center>
+                        <iframe name="tickets" src="#" height="850px" width="100%" zoom="0.7" frameborder="0" allowtransparency="true">
+						</iframe>
+                    </div>
+                </div>
+                <div class="panel" id="timer">
+                    <div>
+                        <iframe name="cms" src="#" height="850px" width="100%" zoom="0.7" frameborder="0" allowtransparency="true">
+						</iframe>
+                    </div>
+                </div>
+                <div class="panel" id="hud" data-related="hud">
+                    <div>
+                        <iframe name="cms" src="#" onload="this.height=screen.height" width="100%" zoom="0.6" frameborder="0" allowtransparency="true">
+						</iframe>
+                    </div>
+                </div>
+                <div class="panel" id="stats" data-related="stats">
+                    <div>
+                        <center>
+                            <button onclick="refreshIframeStats();">Pull Stats
+							</button>
+                        </center>
+                        <iframe name="stats" src="#" height="840px" width="100%" zoom="0.7" frameborder="0" allowtransparency="true">
+						</iframe>
+                    </div>
+                </div>
+                <div class="panel" id="help" data-related="dns">
+                    <div>
+                        <!-- p>**UNDER DEVELOPMENT**
+						</p>
+						<p>NOTE: Some features may behave unpredictably!
+						</p-->
+                        <iframe name="cms" src="#" height="840px" width="100%" zoom="0.7" frameborder="0" allowtransparency="true">
+						</iframe>
+                    </div>
+                </div>
+                <div class="panel" id="clockin" data-related="timesheet">
+                    <div>
+                        <iframe name="time" src="#" height="840px" width="100%" zoom="0.7" frameborder="0" allowtransparency="true">
+						</iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var keylist = "abcdefghijklmnopqrstuvwxyzABCDEFFGHIJKLMNOPQRSTUVWXYZ123456789"
+        var temp = ''
+
+        function generatepass(plength) {
+            temp = ''
+            for (i = 0; i < plength; i++)
+                temp += keylist.charAt(Math.floor(Math.random() * keylist.length))
+            return temp
+        }
+
+        function populateform(enterlength) {
+            document.pgenerate.output.value = generatepass(enterlength)
+        }
+
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js">
+
+
+    </script>
+    <script language="JavaScript">
+        $(document).ready(function() {
+
+            var clip = new ZeroClipboard($("#copypass"), {
+                moviePath: "javascripts/ZeroClipboard.swf"
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("#search").trigger('click');
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".flip").on("click", function(e) {
+                var target = $(this).attr("href");
+                $(target).slideToggle("fast");
+                $(".panel").not(target).hide();
+                e.preventDefault();
+            });
+        });
+
+    </script>
+    <script>
+        function alertUser(msg) {
+            alert(msg);
+        }
+
+    </script>
+    <script>
+        (function() {
+            var cx = '005573759530465445942:vj2aegufdcm';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = '//cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#system").trigger('click');
+        });
+
+    </script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+
+
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script type="text/javascript">
+        function refreshIframeTix() {
+            var ifr = document.getElementsByName('tickets')[0];
+            ifr.src = ifr.src;
+        }
+
+    </script>
+    <script type="text/javascript">
+        function refreshIframeStats() {
+            var ifr = document.getElementsByName('stats')[0];
+            ifr.src = ifr.src;
+        }
+
+    </script>
+    <script type="text/javascript">
+        window.onbeforeunload = function() {
+            return "Data from Search, Notes, PowerPanel will be reset to default if you leave the page, are you sure?";
+        };
+
+    </script>
+    <SCRIPT language=JavaScript>
+        <!-- Begin the punishment for using ie >:)
+        function shake(n) {
+            if (parent.moveBy) {
+                for (i = 10; i > 0; i--) {
+                    for (j = n; j > 0; j--) {
+                        parent.moveBy(-i, 0);
+                        parent.moveBy(0, -i);
+                        parent.moveBy(-i, 0);
+                        parent.moveBy(0, i);
+                        parent.moveBy(i, 0);
+                        parent.moveBy(0, -i);
+                        parent.moveBy(-i, 0);
+                        parent.moveBy(0, i);
+                        parent.moveBy(i, 0);
+                        parent.moveBy(0, -i);
+                        parent.moveBy(-i, 0);
+                        parent.moveBy(0, -i);
+                        parent.moveBy(i, 0);
+                        parent.moveBy(0, i);
+                        parent.moveBy(i, 0);
+                        parent.moveBy(0, i);
+                    }
+                }
+            }
+        }
+        //  End -->
+        <!--
+        shake(10);
+        //-->
+
+    </SCRIPT>
+</body>
+
+</html>
