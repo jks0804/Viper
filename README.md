@@ -1,2 +1,2 @@
 # Viper
-Internal Mutli-windown "Tab Reducer....psft...I don't know?"
+Internal Mutli-window "Tab Reducer....psft...I don't know?"
