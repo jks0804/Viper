@@ -1,30 +1,29 @@
-
 <!DOCTYPE html>
 <html>
 <!--sse-->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width">
-  <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#293a4a">
-  <!-- Mobile Chrome-->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-status-bar-style" content="default">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-  </script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-  </script>
-  <script type="text/javascript" src="./assets/js/bootstrap-2.0.2.js">
-  </script>
-  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-combined.min.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
-  <style type="text/css">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#293a4a">
+<!-- Mobile Chrome-->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="default">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+</script>
+<script type="text/javascript" src="./assets/js/bootstrap-2.0.2.js">
+</script>
+<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-combined.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+<style type="text/css">
     #systems {
       .hidden {
         display: none;
@@ -68,268 +67,266 @@
     		align-items: center;
 		padding-left: 10%;
 		}
- </style>
-  <title>Viper
-  </title>
-  </head>
+</style>
+<title>Viper
+</title>
+</head>
+
 <body>
-   <div id="top-bar">
-    <div class="left-bar">
-	<form action="./assets/bing.php" method="get" target="_blank">
-        <font size="0">Search Frog: </font>
-        <input size="13" name="searchvar" type="text"><br>
-    </form>    
-      <form name="pgenerate" background-color="white" float="left" zindex="10">
-        <input class="input input-small" type="text" size=10 name="output">
-        <input type="button" value="Generate" onClick="populateform(this.form.thelength.value)">
-        <b>Strength:
+    <div id="top-bar">
+        <div class="left-bar">
+            <form method="get" action="http://www.bing.com/search">
+                <input type="hidden" name="cp" value="1252" /></a>
+                <input type="text" name="q" size="30" maxlength="255" />
+                <input type="submit" value="Search" />
+            </form>
+            <form name="pgenerate" background-color="white" float="left" zindex="10">
+                <input class="input input-small" type="text" size=10 name="output">
+                <input type="button" value="Generate" onClick="populateform(this.form.thelength.value)">
+                <b>Strength:
         </b>
-        <input class="input input-mini" type="text" name="thelength" size=3 value="8">
-      </form>
-    </div>
-    </div>
-</div>
- <div class="container">
-    <div class="row">
-      <div class="span12">
-        <div class="header">
-          <nav>
-            <ul class="nav nav-tabs" id="myTabs">
-              <li>
-                <a class="flip active" id="system" href="#system" data-related="loading">Loading...
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#tab1" data-related="tab1">Item 1
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#notes">Item 2
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#tab3">Item 3
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#tab4">Item 4
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#tab5">Item 5
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#tab6">Item 6
-                </a>
-              </li>
-              <li>
-                <a class="flip" href="#tab7">Item 7
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div id="systems" class="systems">
-            <div class="panel" id="tab1" data-related="tab1">
-		<script>
-  (function() {
-    var cx = '005573759530465445942:vj2aegufdcm';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox></gcse:searchbox>
-<gcse:searchresults></gcse:searchresults>
-	    </div>
-          </div>
+                <input class="input input-mini" type="text" name="thelength" size=3 value="8">
+            </form>
         </div>
-        <p>&nbsp;
-        </p>
-        <div class="panel" id="notes" data-related="notes">
-          <div>
-            <textarea id="note">Notes:
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="header">
+                    <nav>
+                        <ul class="nav nav-tabs" id="myTabs">
+                            <li>
+                                <a class="flip active" id="system" href="#system" data-related="loading">Loading...
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tab1" data-related="tab1">Item 1
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#notes">Item 2
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tab3">Item 3
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tab4">Item 4
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tab5">Item 5
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tab6">Item 6
+                </a>
+                            </li>
+                            <li>
+                                <a class="flip" href="#tab7">Item 7
+                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="systems" class="systems">
+                        <div class="panel" id="tab1" data-related="tab1">
+                            <script>
+                                (function() {
+                                    var cx = '005573759530465445942:vj2aegufdcm';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                  })();
+                            </script>
+                            <gcse:searchbox></gcse:searchbox>
+                            <gcse:searchresults></gcse:searchresults>
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp;
+                </p>
+                <div class="panel" id="notes" data-related="notes">
+                    <div>
+                        <textarea id="note">Notes:
             </textarea>
-            <p>&nbsp;
-            </p>
-          </div>
-        </div>
-        <p>&nbsp;
-        </p>
-        <p>
-        </p>
-        <div class="panel" id="tab3" data-related="tab3">
-          <div>
-            <center>
-              <button onclick="refreshIframeTab3();">Refresh
+                        <p>&nbsp;
+                        </p>
+                    </div>
+                </div>
+                <p>&nbsp;
+                </p>
+                <p>
+                </p>
+                <div class="panel" id="tab3" data-related="tab3">
+                    <div>
+                        <center>
+                            <button onclick="refreshIframeTab3();">Refresh
               </button>
-              <p>*The queue will auto-refresh every minute...or so..
-              </p>
-            </center>
-		<embed type="text/html" id="tab3-internal" name="tab3-internal" src="#"
-            style="width:100%; height:900px; margin:1%;">
-    </embed>
-          </div>
-        </div>
-        <div class="panel" id="tab4" data-related="tab4">
-          <div>
-		<embed type="text/html" name="tab4-internal" src="tab4-internal.htm"
-            style="width:700px; height:900px; margin:1%; overflow:scroll;">
-    </embed>
-          </div>
-        </div>
-        <div class="panel" id="tab5" data-related="tab5">
-          <div>
-            <center>
-              <button onclick="refreshIframeTab5();">Pull Stats
+                            <p>*The queue will auto-refresh every minute...or so..
+                            </p>
+                        </center>
+                        <embed type="text/html" id="tab3-internal" name="tab3-internal" src="#" style="width:100%; height:900px; margin:1%;">
+                        </embed>
+                    </div>
+                </div>
+                <div class="panel" id="tab4" data-related="tab4">
+                    <div>
+                        <embed type="text/html" name="tab4-internal" src="tab4-internal.htm" style="width:700px; height:900px; margin:1%; overflow:scroll;">
+                        </embed>
+                    </div>
+                </div>
+                <div class="panel" id="tab5" data-related="tab5">
+                    <div>
+                        <center>
+                            <button onclick="refreshIframeTab5();">Pull Stats
 </button>
-              <p>**This is an accnountment**
-              </p>
-            </center>
-		<embed type="text/html" name="tab5-internal" src="#"
-            style="width:100%; height:840px; margin:1%;">
-    </embed>
-          </div>
+                            <p>**This is an accnountment**
+                            </p>
+                        </center>
+                        <embed type="text/html" name="tab5-internal" src="#" style="width:100%; height:840px; margin:1%;">
+                        </embed>
+                    </div>
+                </div>
+                <div class="panel" id="tab6" data-related="tab6">
+                    <div>
+                        <embed type="text/html" name="tab6-internal" src="http://leafdns.com" style="width:100%; height:840px; margin:1%;">
+                        </embed>
+                    </div>
+                </div>
+                <div class="panel" id="tab7" data-related="tab7">
+                    <div>
+                        <embed type="text/html" name="tab7-internal" src="#" style="width:100%; height:840px; margin:1%;">
+                        </embed>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="panel" id="tab6" data-related="tab6">
-          <div>
-            <embed type="text/html" name="tab6-internal" src="http://leafdns.com"
-            style="width:100%; height:840px; margin:1%;">
-    </embed>
-          </div>
-        </div>
-        <div class="panel" id="tab7" data-related="tab7">
-          <div>
-            <embed type="text/html" name="tab7-internal" src="#"
-            style="width:100%; height:840px; margin:1%;">
-    </embed>
-          </div>
-        </div>
-      </div>
-    </div>
-  <script>
-    var keylist = "abcdefghijklmnopqrstuvwxyzABCDEFFGHIJKLMNOPQRSTUVWXYZ123456789"
-    var temp = ''
-    function generatepass(plength) {
-      temp = ''
-      for (i = 0; i < plength; i++)
-        temp += keylist.charAt(Math.floor(Math.random() * keylist.length))
-        return temp
-    }
-    function populateform(enterlength) {
-      document.pgenerate.output.value = generatepass(enterlength)
-    }
-  </script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js">
-  </script>
-  <script language="JavaScript">
-    $(document).ready(function() {
-      var clip = new ZeroClipboard($("#copypass"), {
-        moviePath: "javascripts/ZeroClipboard.swf"
-      }
-                                  );
-    }
-                     );
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".flip").on("click", function(e) {
-        var target = $(this).attr("href");
-        $(target).slideToggle("fast");
-        $(".panel").not(target).hide();
-        e.preventDefault();
-      }
-                   );
-    }
-                     );
-  </script>
-  <script>
-    function alertUser(msg) {
-      alert(msg);
-    }
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#system").trigger('click');
-    }
-                     );
-  </script>
-  <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-  </script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js">
-  </script>
-  <script type="text/javascript">
-    function refreshIframeTab3() {
-      var ifr = document.getElementsByName('tab3-interal')[0];
-      ifr.src = ifr.src;
-    }
-  </script>
-  <script script type="text/javascript">
-    window.setInterval("reloadIFrameTab3Auto();", 60000);
-    function reloadIFrameTixAuto() {
-      document.getElementById('tab3-internal').src = document.getElementById('tab3-internal').src
-    }
-  </script>
-  <script script type="text/javascript">
-    window.setInterval("reloadIFrameTab4Auto();", 3000);
-    function reloadIFrameTab4Auto() {
-      document.getElementById('tab4-internal').src = document.getElementById('tab4-internal').src
-    }
-  </script>
-  <script script type="text/javascript">
-    window.setInterval("reloadIFrameTab6Auto();", 1800690);
-    function reloadIFrameStatsAuto() {
-      document.getElementById('tab6-internal').src = document.getElementById('tab6-internal').src
-    }
-  </script> 
-  <script type="text/javascript">
-    function refreshIframeTab6() {
-      var ifr = document.getElementsByName('tab6-internal')[0];
-      ifr.src = ifr.src;
-    }
-  </script>
-  <script type="text/javascript">
-    window.onbeforeunload = function() {
-      return "Data from Search, Notes, other tabs will be reset to default if you leave the page, are you sure?";
-    };
-  </script>
-  <SCRIPT language=JavaScript>
-    <!-- Begin
-    function shake(n) {
-      if (parent.moveBy) {
-        for (i = 10; i > 0; i--) {
-          for (j = n; j > 0; j--) {
-            parent.moveBy(-i, 0);
-            parent.moveBy(0, -i);
-            parent.moveBy(-i, 0);
-            parent.moveBy(0, i);
-            parent.moveBy(i, 0);
-            parent.moveBy(0, -i);
-            parent.moveBy(-i, 0);
-            parent.moveBy(0, i);
-            parent.moveBy(i, 0);
-            parent.moveBy(0, -i);
-            parent.moveBy(-i, 0);
-            parent.moveBy(0, -i);
-            parent.moveBy(i, 0);
-            parent.moveBy(0, i);
-            parent.moveBy(i, 0);
-            parent.moveBy(0, i);
-          }
-        }
-      }
-    }
-    //  End -->
-    <!--
-      shake(1);
-    //-->
-  </SCRIPT>
- <!-- For winter time -->
-  <!-- script src="//cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js" >
+        <script>
+            var keylist = "abcdefghijklmnopqrstuvwxyzABCDEFFGHIJKLMNOPQRSTUVWXYZ123456789"
+            var temp = ''
+            function generatepass(plength) {
+              temp = ''
+              for (i = 0; i < plength; i++)
+                temp += keylist.charAt(Math.floor(Math.random() * keylist.length))
+                return temp
+            }
+            function populateform(enterlength) {
+              document.pgenerate.output.value = generatepass(enterlength)
+            }
+        </script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js">
+        </script>
+        <script language="JavaScript">
+            $(document).ready(function() {
+              var clip = new ZeroClipboard($("#copypass"), {
+                moviePath: "javascripts/ZeroClipboard.swf"
+              }
+                                          );
+            }
+                             );
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $(".flip").on("click", function(e) {
+                var target = $(this).attr("href");
+                $(target).slideToggle("fast");
+                $(".panel").not(target).hide();
+                e.preventDefault();
+              }
+                           );
+            }
+                             );
+        </script>
+        <script>
+            function alertUser(msg) {
+              alert(msg);
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $("#system").trigger('click');
+            }
+                             );
+        </script>
+        <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js">
+        </script>
+        <script type="text/javascript">
+            function refreshIframeTab3() {
+              var ifr = document.getElementsByName('tab3-interal')[0];
+              ifr.src = ifr.src;
+            }
+        </script>
+        <script script type="text/javascript">
+            window.setInterval("reloadIFrameTab3Auto();", 60000);
+            function reloadIFrameTixAuto() {
+              document.getElementById('tab3-internal').src = document.getElementById('tab3-internal').src
+            }
+        </script>
+        <script script type="text/javascript">
+            window.setInterval("reloadIFrameTab4Auto();", 3000);
+            function reloadIFrameTab4Auto() {
+              document.getElementById('tab4-internal').src = document.getElementById('tab4-internal').src
+            }
+        </script>
+        <script script type="text/javascript">
+            window.setInterval("reloadIFrameTab6Auto();", 1800690);
+            function reloadIFrameTab6Auto() {
+              document.getElementById('tab6-internal').src = document.getElementById('tab6-internal').src
+            }
+        </script>
+        <script type="text/javascript">
+            function refreshIframeTab6() {
+              var ifr = document.getElementsByName('tab6-internal')[0];
+              ifr.src = ifr.src;
+            }
+        </script>
+        <script type="text/javascript">
+            window.onbeforeunload = function() {
+              return "Data from Search, Notes, other tabs will be reset to default if you leave the page, are you sure?";
+            };
+        </script>
+        <SCRIPT language=JavaScript>
+            <!-- Begin
+            function shake(n) {
+              if (parent.moveBy) {
+                for (i = 10; i > 0; i--) {
+                  for (j = n; j > 0; j--) {
+                    parent.moveBy(-i, 0);
+                    parent.moveBy(0, -i);
+                    parent.moveBy(-i, 0);
+                    parent.moveBy(0, i);
+                    parent.moveBy(i, 0);
+                    parent.moveBy(0, -i);
+                    parent.moveBy(-i, 0);
+                    parent.moveBy(0, i);
+                    parent.moveBy(i, 0);
+                    parent.moveBy(0, -i);
+                    parent.moveBy(-i, 0);
+                    parent.moveBy(0, -i);
+                    parent.moveBy(i, 0);
+                    parent.moveBy(0, i);
+                    parent.moveBy(i, 0);
+                    parent.moveBy(0, i);
+                  }
+                }
+              }
+            }
+            //  End -->
+            <!--
+              shake(1);
+            //-->
+        </SCRIPT>
+        <!-- For winter time -->
+        <!-- script src="//cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js" >
   </script -->
 </body>
 <!--/sse-->
+
 </html>
