@@ -1,7 +1,7 @@
 #systems {
 	.hidden {
 		display: none;
-	}
+			}
 }
 
 #wrap {
@@ -24,7 +24,7 @@
 	border: 1px solid red;
 }
 
-#cms {
+#tab6-internal {
 	width: 100%;
 	height: 50%;
 	background-color: white;
