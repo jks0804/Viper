@@ -1,0 +1,67 @@
+#systems {
+	.hidden {
+		display: none;
+	}
+}
+
+#wrap {
+	width: 100%;
+	height: 90%;
+	padding: 15px;
+	overflow: auto;
+}
+
+#pp {
+	height: 80%;
+	zoom: 0.75;
+	-moz-transform: scale(0.7);
+	-moz-transform-origin: 0 0;
+}
+
+#note {
+	width: 100%;
+	height: 700px;
+	border: 1px solid red;
+}
+
+#cms {
+	width: 100%;
+	height: 50%;
+	background-color: white;
+}
+
+#ppFrame {
+	height: 900px;
+	width: 100%;
+	zoom: 0.7;
+}
+
+#850Frame {
+	height: 850px;
+	width: 100%;
+	zoom: 0.7;
+}
+
+#840Frame {
+	height: 840px;
+	width: 100%;
+	zoom: 0.7;
+}
+
+.top-bar {
+	float: left;
+	clear: none;
+}
+
+#left-bar {
+	display: inline-block;
+	position: relative;
+	width: 50%;
+	left: 0;
+}
+#right-bar {
+	display: inline-block;
+	position: relative;
+        width: 50%;
+        left: 0;
+}
